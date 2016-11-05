@@ -13,5 +13,6 @@ springBoot {
 }
 
 dependencies {
+    compile project(':projectx-api-service')
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
 }
