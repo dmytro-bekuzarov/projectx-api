@@ -1,6 +1,6 @@
 package com.sind.projectx.repository;
 
-import com.sind.projectx.domain.User;
+import com.sind.projectx.domain.user.User;
 
 /**
  * @author Dmytro Bekuzarov

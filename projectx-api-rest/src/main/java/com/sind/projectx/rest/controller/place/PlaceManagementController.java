@@ -1,11 +1,11 @@
 package com.sind.projectx.rest.controller.place;
 
-import com.sind.projectx.domain.Place;
-import com.sind.projectx.domain.UserRole;
-import com.sind.projectx.rest.exception.IdNotFoundException;
+import com.sind.projectx.domain.place.Place;
+import com.sind.projectx.domain.user.UserRole;
+import com.sind.projectx.repository.CurrentUserHolder;
 import com.sind.projectx.rest.util.annotation.AccessRestrictions;
 import com.sind.projectx.rest.validator.PlaceValidator;
-import com.sind.projectx.service.PlaceService;
+import com.sind.projectx.service.place.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -20,7 +20,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
  */
 @RestController
 @RequestMapping("/places")
-@AccessRestrictions(roles = UserRole.ADMIN)
+@AccessRestrictions(roles = UserRole.MANAGER)
 @Validated
 public class PlaceManagementController {
 
@@ -31,22 +31,20 @@ public class PlaceManagementController {
 
     @RequestMapping(value = "", method = POST)
     public Place addPlace(@Valid @RequestBody Place place) {
+        placeValidator.validateForAdd(place, CurrentUserHolder.getUser().getId());
         return placeService.add(place);
     }
 
     @RequestMapping(value = "", method = PUT)
     public Place updatePlace(@Valid @RequestBody Place place) {
-        placeValidator.validateForUpdate(place);
+        placeValidator.validateForUpdate(place, CurrentUserHolder.getUser().getId());
         return placeService.update(place);
     }
 
     @RequestMapping(value = "/{placeId}", method = DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deletePlace(@PathVariable String placeId) {
-        boolean exists = placeService.exists(placeId);
-        if (!exists) {
-            throw new IdNotFoundException();
-        }
+        placeValidator.validateForDelete(placeId, CurrentUserHolder.getUser().getId());
         placeService.deleteById(placeId);
     }
 

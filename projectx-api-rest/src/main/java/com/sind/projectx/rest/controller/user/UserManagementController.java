@@ -1,11 +1,11 @@
 package com.sind.projectx.rest.controller.user;
 
-import com.sind.projectx.domain.User;
-import com.sind.projectx.domain.UserRole;
+import com.sind.projectx.domain.user.User;
+import com.sind.projectx.domain.user.UserRole;
 import com.sind.projectx.rest.exception.IdNotFoundException;
 import com.sind.projectx.rest.util.annotation.AccessRestrictions;
 import com.sind.projectx.rest.validator.UserValidator;
-import com.sind.projectx.service.UserService;
+import com.sind.projectx.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;

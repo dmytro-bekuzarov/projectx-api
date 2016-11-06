@@ -1,15 +1,11 @@
-package com.sind.projectx.domain;
-
-import org.hibernate.validator.constraints.NotBlank;
+package com.sind.projectx.domain.common;
 
 /**
  * @author Dmytro Bekuzarov
  */
 public class Location {
 
-    @NotBlank
     private Double latitude;
-    @NotBlank
     private Double longitude;
 
     public Location() {

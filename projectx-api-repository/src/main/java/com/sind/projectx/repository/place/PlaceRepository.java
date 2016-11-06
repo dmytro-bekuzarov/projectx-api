@@ -1,6 +1,6 @@
-package com.sind.projectx.repository;
+package com.sind.projectx.repository.place;
 
-import com.sind.projectx.domain.Place;
+import com.sind.projectx.domain.place.Place;
 import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.GeoResults;
 import org.springframework.data.geo.Point;

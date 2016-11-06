@@ -1,33 +1,26 @@
-{
-  "taxonomies": [
-    {
-      "id": "1",
-      "names": {
-        "en": "Meat",
-        "ru": "Мясо",
-        "uk": "М'ясо"
+[
+  {
+    "_id": "MEAT",
+    "name": "Meat",
+    "categories": [
+      {
+        "_id": "MEAT/STEAKS",
+        "name": "Steaks"
       },
-      "types": [
-        {
-          "id": "1/1",
-          "names": {
-            "en": "Steak",
-            "ru": "Стейк",
-            "uk": "Стейк"
-          }
-        },
-        {
-          "id": "1/2",
-          "names": {
-            "en": "Burger",
-            "ru": "Бургер",
-            "uk": "Бургер"
-          }
-        }
-      ]
-    },
-    {
-      ""
-    }
-  ]
-}
+      {
+        "_id": "MEAT/BURGERS",
+        "names": "Burger"
+      }
+    ]
+  },
+  {
+    "_id": "SNACKS",
+    "name": "Snacks",
+    "categories": [
+      {
+        "_id": "SNACKS/SALADS",
+        "name": "Salads"
+      }
+    ]
+  }
+]

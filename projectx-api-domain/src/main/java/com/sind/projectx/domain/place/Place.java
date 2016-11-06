@@ -1,7 +1,8 @@
-package com.sind.projectx.domain;
+package com.sind.projectx.domain.place;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sind.projectx.domain.common.Location;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -22,6 +23,8 @@ public class Place {
     private String id;
     @NotBlank
     private String name;
+    @NotBlank
+    private String placeNetworkId;
 
     @GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
     @JsonIgnore
@@ -42,6 +45,14 @@ public class Place {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPlaceNetworkId() {
+        return placeNetworkId;
+    }
+
+    public void setPlaceNetworkId(String placeNetworkId) {
+        this.placeNetworkId = placeNetworkId;
     }
 
     public GeoJsonPoint getLocation() {

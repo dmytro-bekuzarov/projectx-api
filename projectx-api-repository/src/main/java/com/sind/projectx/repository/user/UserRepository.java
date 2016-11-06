@@ -1,6 +1,6 @@
-package com.sind.projectx.repository;
+package com.sind.projectx.repository.user;
 
-import com.sind.projectx.domain.User;
+import com.sind.projectx.domain.user.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

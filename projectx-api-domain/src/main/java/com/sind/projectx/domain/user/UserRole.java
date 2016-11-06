@@ -1,4 +1,4 @@
-package com.sind.projectx.domain;
+package com.sind.projectx.domain.user;
 
 /**
  * @author Dmytro Bekuzarov

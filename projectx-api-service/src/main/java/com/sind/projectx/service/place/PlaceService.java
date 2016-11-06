@@ -1,7 +1,7 @@
-package com.sind.projectx.service;
+package com.sind.projectx.service.place;
 
-import com.sind.projectx.domain.Place;
-import com.sind.projectx.repository.PlaceRepository;
+import com.sind.projectx.domain.place.Place;
+import com.sind.projectx.repository.place.PlaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.GeoResults;
@@ -39,5 +39,9 @@ public class PlaceService {
 
     public boolean exists(String placeId) {
         return placeRepository.exists(placeId);
+    }
+
+    public Place findById(String placeId) {
+        return placeRepository.findOne(placeId);
     }
 }

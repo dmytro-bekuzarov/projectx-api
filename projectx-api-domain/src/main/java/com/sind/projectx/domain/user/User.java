@@ -1,8 +1,9 @@
-package com.sind.projectx.domain;
+package com.sind.projectx.domain.user;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sind.projectx.domain.common.Location;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.Id;

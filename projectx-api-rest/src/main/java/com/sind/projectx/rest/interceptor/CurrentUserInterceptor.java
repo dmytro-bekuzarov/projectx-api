@@ -1,10 +1,10 @@
 package com.sind.projectx.rest.interceptor;
 
-import com.sind.projectx.domain.User;
+import com.sind.projectx.domain.user.User;
 import com.sind.projectx.repository.CurrentUserHolder;
 import com.sind.projectx.rest.exception.ForbiddenException;
 import com.sind.projectx.rest.util.request.Headers;
-import com.sind.projectx.service.UserService;
+import com.sind.projectx.service.user.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

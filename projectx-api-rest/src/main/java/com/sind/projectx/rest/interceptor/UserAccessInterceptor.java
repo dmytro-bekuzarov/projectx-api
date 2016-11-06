@@ -1,6 +1,6 @@
 package com.sind.projectx.rest.interceptor;
 
-import com.sind.projectx.domain.User;
+import com.sind.projectx.domain.user.User;
 import com.sind.projectx.repository.CurrentUserHolder;
 import com.sind.projectx.rest.exception.ForbiddenException;
 import com.sind.projectx.rest.util.annotation.AccessRestrictions;
